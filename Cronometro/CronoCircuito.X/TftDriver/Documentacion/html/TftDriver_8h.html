@@ -1,0 +1,1011 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Driver para TFT1.8SP.: Referencia del Archivo TftDriver.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Driver para TFT1.8SP.
+   </div>
+   <div id="projectbrief">Driver para el shield TFT1.8SP de Elecfreaks.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">'defines'</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia del Archivo TftDriver.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Módulo encargado de gestionar el TFT1.8 del shield TFT1.8SP de elecfreaks (ref. EF02005). El shield está basado en un display con el controlador ST7735S.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;xc.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+</div>
+<p><a href="TftDriver_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+'defines'</h2></td></tr>
+<tr class="memitem:a211dd160685be8a5a4f43be3fc3195a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a211dd160685be8a5a4f43be3fc3195a4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LANDSCAPE</b>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a211dd160685be8a5a4f43be3fc3195a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20d6fe800ee77dff684c05b86d5ab3b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20d6fe800ee77dff684c05b86d5ab3b7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PORTRAIT</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a20d6fe800ee77dff684c05b86d5ab3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a437ef08681e7210d6678427030446a54"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a437ef08681e7210d6678427030446a54"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LEFT</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a437ef08681e7210d6678427030446a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80fb826a684cf3f0d306b22aa100ddac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80fb826a684cf3f0d306b22aa100ddac"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RIGHT</b>&#160;&#160;&#160;9999</td></tr>
+<tr class="separator:a80fb826a684cf3f0d306b22aa100ddac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a824fea1f256659e11e6cd8c82cb13338"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a824fea1f256659e11e6cd8c82cb13338"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CENTER</b>&#160;&#160;&#160;9998</td></tr>
+<tr class="separator:a824fea1f256659e11e6cd8c82cb13338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d17857b09c8ba38ca124916e562e267"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d17857b09c8ba38ca124916e562e267"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DISP_Y_SIZE</b>&#160;&#160;&#160;159</td></tr>
+<tr class="separator:a2d17857b09c8ba38ca124916e562e267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acde6ed92d2ff3e4be70eff2587b45ad1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acde6ed92d2ff3e4be70eff2587b45ad1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DISP_X_SIZE</b>&#160;&#160;&#160;127</td></tr>
+<tr class="separator:acde6ed92d2ff3e4be70eff2587b45ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acab7e7029b260dd60c76016ee22e2e1b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acab7e7029b260dd60c76016ee22e2e1b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_BLACK</b>&#160;&#160;&#160;0x0000</td></tr>
+<tr class="separator:acab7e7029b260dd60c76016ee22e2e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a060c515545806e281c70e2c6cd7f6273"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a060c515545806e281c70e2c6cd7f6273"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_WHITE</b>&#160;&#160;&#160;0xFFFF</td></tr>
+<tr class="separator:a060c515545806e281c70e2c6cd7f6273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05af8114a8dbc67e31bf9b1764d98311"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05af8114a8dbc67e31bf9b1764d98311"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_RED</b>&#160;&#160;&#160;0xF800</td></tr>
+<tr class="separator:a05af8114a8dbc67e31bf9b1764d98311"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec57958084e071ad392ea88bf7672204"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec57958084e071ad392ea88bf7672204"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_GREEN</b>&#160;&#160;&#160;0x0400</td></tr>
+<tr class="separator:aec57958084e071ad392ea88bf7672204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6022c84e0b5c971c702885c223fc0822"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6022c84e0b5c971c702885c223fc0822"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_BLUE</b>&#160;&#160;&#160;0x001F</td></tr>
+<tr class="separator:a6022c84e0b5c971c702885c223fc0822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04ec69a65cbd0981a0b4c6602ae0efdb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04ec69a65cbd0981a0b4c6602ae0efdb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_SILVER</b>&#160;&#160;&#160;0xC618</td></tr>
+<tr class="separator:a04ec69a65cbd0981a0b4c6602ae0efdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a761e9356f781e4011a6fc6f52da7a892"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a761e9356f781e4011a6fc6f52da7a892"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_GRAY</b>&#160;&#160;&#160;0x8410</td></tr>
+<tr class="separator:a761e9356f781e4011a6fc6f52da7a892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40e9c0f29e764dbb88df6388648887cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40e9c0f29e764dbb88df6388648887cf"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_MAROON</b>&#160;&#160;&#160;0x8000</td></tr>
+<tr class="separator:a40e9c0f29e764dbb88df6388648887cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a705cc38ba754593003c335b9f150c45a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a705cc38ba754593003c335b9f150c45a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_YELLOW</b>&#160;&#160;&#160;0xFFE0</td></tr>
+<tr class="separator:a705cc38ba754593003c335b9f150c45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adff49711b5b3f0cf4b327cdf3b754675"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adff49711b5b3f0cf4b327cdf3b754675"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_OLIVE</b>&#160;&#160;&#160;0x8400</td></tr>
+<tr class="separator:adff49711b5b3f0cf4b327cdf3b754675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4942b422cf032391a9b902592a0a623d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4942b422cf032391a9b902592a0a623d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_LIME</b>&#160;&#160;&#160;0x07E0</td></tr>
+<tr class="separator:a4942b422cf032391a9b902592a0a623d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add023c43804b1afb0f4b5448b4fd6a2e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add023c43804b1afb0f4b5448b4fd6a2e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_AQUA</b>&#160;&#160;&#160;0x07FF</td></tr>
+<tr class="separator:add023c43804b1afb0f4b5448b4fd6a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a1606169c4ba0a29d51850342967561"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a1606169c4ba0a29d51850342967561"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_TEAL</b>&#160;&#160;&#160;0x0410</td></tr>
+<tr class="separator:a5a1606169c4ba0a29d51850342967561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa409dd7877802eea540404cf7a62f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fa409dd7877802eea540404cf7a62f0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_NAVY</b>&#160;&#160;&#160;0x0010</td></tr>
+<tr class="separator:a1fa409dd7877802eea540404cf7a62f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4d1a0b3af0c908243646f70f54a2c74"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4d1a0b3af0c908243646f70f54a2c74"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_FUCHSIA</b>&#160;&#160;&#160;0xF81F</td></tr>
+<tr class="separator:ab4d1a0b3af0c908243646f70f54a2c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad18e1c43c79d9156120b57f5dbc5db44"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad18e1c43c79d9156120b57f5dbc5db44"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_PURPLE</b>&#160;&#160;&#160;0x8010</td></tr>
+<tr class="separator:ad18e1c43c79d9156120b57f5dbc5db44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a384d2fb6da99f7af6afab019699e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37a384d2fb6da99f7af6afab019699e1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VGA_TRANSPARENT</b>&#160;&#160;&#160;0xFFFFFFFF</td></tr>
+<tr class="separator:a37a384d2fb6da99f7af6afab019699e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a9d5855c201de1db613dbcb2bc9d6cdca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#a9d5855c201de1db613dbcb2bc9d6cdca">inicializarTFT</a> (int orientacion)</td></tr>
+<tr class="separator:a9d5855c201de1db613dbcb2bc9d6cdca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a556ec8adee522ef852adc5ecba492996"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#a556ec8adee522ef852adc5ecba492996">clrScr</a> (void)</td></tr>
+<tr class="separator:a556ec8adee522ef852adc5ecba492996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac77d265acfbff075ba100a03adab0d20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#ac77d265acfbff075ba100a03adab0d20">setColorRGB</a> (uint8_t r, uint8_t g, uint8_t b)</td></tr>
+<tr class="separator:ac77d265acfbff075ba100a03adab0d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d6d012f8ddf8f3493499d0689dd6ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#aa2d6d012f8ddf8f3493499d0689dd6ba">setColor</a> (uint16_t color)</td></tr>
+<tr class="separator:aa2d6d012f8ddf8f3493499d0689dd6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1d7e5f7822e300f3d98cc2c405f1a0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#ad1d7e5f7822e300f3d98cc2c405f1a0e">setBackColorRGB</a> (uint8_t r, uint8_t g, uint8_t b)</td></tr>
+<tr class="separator:ad1d7e5f7822e300f3d98cc2c405f1a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e6fe8f83c873a1e235ae2f1cfbf460"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#a85e6fe8f83c873a1e235ae2f1cfbf460">setBackColor</a> (uint32_t color)</td></tr>
+<tr class="separator:a85e6fe8f83c873a1e235ae2f1cfbf460"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69f5e0e04dc084dcfd8f11da497290d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#a69f5e0e04dc084dcfd8f11da497290d8">drawRect</a> (int x1, int y1, int x2, int y2)</td></tr>
+<tr class="separator:a69f5e0e04dc084dcfd8f11da497290d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9699711101163b29a02dc191efff6a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#ac9699711101163b29a02dc191efff6a9">drawRoundRect</a> (int x1, int y1, int x2, int y2)</td></tr>
+<tr class="separator:ac9699711101163b29a02dc191efff6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a670eabe51fc97973e3ae3b909b9a57dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#a670eabe51fc97973e3ae3b909b9a57dc">drawLine</a> (int x1, int y1, int x2, int y2)</td></tr>
+<tr class="separator:a670eabe51fc97973e3ae3b909b9a57dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2dab771cbe8d68506897f90536f8d3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#aa2dab771cbe8d68506897f90536f8d3f">drawPixel</a> (int x, int y)</td></tr>
+<tr class="separator:aa2dab771cbe8d68506897f90536f8d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec249f4de798ec005c29ce88b20e4ef7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#aec249f4de798ec005c29ce88b20e4ef7">setFont</a> (uint8_t *font)</td></tr>
+<tr class="separator:aec249f4de798ec005c29ce88b20e4ef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a847b53f1c381c935f9f9706bc148b6a1"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#a847b53f1c381c935f9f9706bc148b6a1">getFont</a> (void)</td></tr>
+<tr class="separator:a847b53f1c381c935f9f9706bc148b6a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7a1bb96d4a66d12736bb4aae96d4e6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#a3b7a1bb96d4a66d12736bb4aae96d4e6">getFontXsize</a> (void)</td></tr>
+<tr class="separator:a3b7a1bb96d4a66d12736bb4aae96d4e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9e70ceef4b20c00bf1921d9a52fdb78"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#ad9e70ceef4b20c00bf1921d9a52fdb78">getFontYsize</a> (void)</td></tr>
+<tr class="separator:ad9e70ceef4b20c00bf1921d9a52fdb78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2eb6c64aa531ae6576d1ac6a9a0a896"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#ab2eb6c64aa531ae6576d1ac6a9a0a896">print</a> (char *st, int x, int y, int deg)</td></tr>
+<tr class="separator:ab2eb6c64aa531ae6576d1ac6a9a0a896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63dbd4ad7b1c9de0e5d96851bb4fc4e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#a63dbd4ad7b1c9de0e5d96851bb4fc4e3">fillRect</a> (int x1, int y1, int x2, int y2)</td></tr>
+<tr class="separator:a63dbd4ad7b1c9de0e5d96851bb4fc4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a067d1eb3a441d46aea4777a3cdbff9bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#a067d1eb3a441d46aea4777a3cdbff9bc">fillRoundRect</a> (int x1, int y1, int x2, int y2)</td></tr>
+<tr class="separator:a067d1eb3a441d46aea4777a3cdbff9bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae78bea676676698842bfcf44afa01fe7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#ae78bea676676698842bfcf44afa01fe7">drawCircle</a> (int x, int y, int radius)</td></tr>
+<tr class="separator:ae78bea676676698842bfcf44afa01fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0684d2369cd27f4feffc1dffae0b8df5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#a0684d2369cd27f4feffc1dffae0b8df5">fillCircle</a> (int x, int y, int radius)</td></tr>
+<tr class="separator:a0684d2369cd27f4feffc1dffae0b8df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a567fa7d4acc4bcf15ee7e42bfbdcf2f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#a567fa7d4acc4bcf15ee7e42bfbdcf2f7">fillScrRGB</a> (uint8_t r, uint8_t g, uint8_t b)</td></tr>
+<tr class="separator:a567fa7d4acc4bcf15ee7e42bfbdcf2f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6909defb82a4e0e31cdbb5436482b043"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#a6909defb82a4e0e31cdbb5436482b043">fillScr</a> (uint16_t color)</td></tr>
+<tr class="separator:a6909defb82a4e0e31cdbb5436482b043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52d2286720fcaddd3490959bcf25bb1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TftDriver_8h.html#a52d2286720fcaddd3490959bcf25bb1a">drawBitmap</a> (int x, int y, int sx, int sy, uint16_t data[], int scale)</td></tr>
+<tr class="separator:a52d2286720fcaddd3490959bcf25bb1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Módulo encargado de gestionar el TFT1.8 del shield TFT1.8SP de elecfreaks (ref. EF02005). El shield está basado en un display con el controlador ST7735S. </p>
+<dl class="section author"><dt>Autor</dt><dd>José Daniel Muñoz Frías (daniel)</dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>1.0.0. Módulo original</dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>17/11/2016 <pre class="fragment">      Este driver está basado en el UTFT driver, aunque se ha portado a C
+      y se han eliminado el soporte para el resto de TFTs que incluía el
+      driver original.</pre></dd></dl>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a class="anchor" id="a556ec8adee522ef852adc5ecba492996"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clrScr </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Borra la pantalla poniendola toda a color negro. </p>
+
+</div>
+</div>
+<a class="anchor" id="a52d2286720fcaddd3490959bcf25bb1a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawBitmap </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>data</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dibuja una imagen (bitmap) en la pantalla. El bitmap ha de estar definido como un vector con los colores de todos los píxeles en formato RGB565. La forma más fácil de generarlo es mediante una aplicación web disponible en la página del autor del driver original: <a href="http://www.rinkydinkelectronics.com/t_imageconverter565.php">http://www.rinkydinkelectronics.com/t_imageconverter565.php</a></p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Coordenada X de la esquina superior derecha del bitmap. </td></tr>
+    <tr><td class="paramname">y</td><td>Coordenada Y de la esquina superior derecha del bitmap. </td></tr>
+    <tr><td class="paramname">sx</td><td>Tamaño horizontal del bitmap en pixels. </td></tr>
+    <tr><td class="paramname">sy</td><td>Tamaño vertical del bitmap en pixels. </td></tr>
+    <tr><td class="paramname">data</td><td>Dirección del vector que contiene el bitmap. </td></tr>
+    <tr><td class="paramname">scale</td><td>Factor de escala para dibujar el bitmap. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae78bea676676698842bfcf44afa01fe7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawCircle </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dibuja un círculo definido por su centro y su radio.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Coordenada X del centro. </td></tr>
+    <tr><td class="paramname">y</td><td>Coordenada Y del dentro. </td></tr>
+    <tr><td class="paramname">radius</td><td>Radio del círculo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a670eabe51fc97973e3ae3b909b9a57dc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawLine </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dibuja una línea entre los puntos (x1,y1) y (x2,y2)</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x1</td><td>Coordenada X del punto 1. </td></tr>
+    <tr><td class="paramname">y1</td><td>Coordenada Y del punto 1. </td></tr>
+    <tr><td class="paramname">x2</td><td>Coordenada X del punto 2. </td></tr>
+    <tr><td class="paramname">y2</td><td>Coordenada Y del punto 2. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa2dab771cbe8d68506897f90536f8d3f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawPixel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dibuja un pixel en las coordenadas (x,y).</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Coordenada X del pixel. </td></tr>
+    <tr><td class="paramname">y</td><td>Coordenada Y del pixel. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a69f5e0e04dc084dcfd8f11da497290d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawRect </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dibuja un rectangulo definido por sus dos esquinas.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x1</td><td>Coordenada X de la primera esquina. </td></tr>
+    <tr><td class="paramname">y1</td><td>Coordenada Y de la primera esquina. </td></tr>
+    <tr><td class="paramname">x2</td><td>Coordenada X de la segunda esquina. </td></tr>
+    <tr><td class="paramname">y2</td><td>Coordenada Y de la segunda esquina. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac9699711101163b29a02dc191efff6a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawRoundRect </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dibuja un rectangulo con los bordes redondeados definido por sus dos esquinas.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x1</td><td>Coordenada X de la primera esquina. </td></tr>
+    <tr><td class="paramname">y1</td><td>Coordenada Y de la primera esquina. </td></tr>
+    <tr><td class="paramname">x2</td><td>Coordenada X de la segunda esquina. </td></tr>
+    <tr><td class="paramname">y2</td><td>Coordenada Y de la segunda esquina. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0684d2369cd27f4feffc1dffae0b8df5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fillCircle </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dibuja un círculo relleno definido por su centro y su radio.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Coordenada X del centro. </td></tr>
+    <tr><td class="paramname">y</td><td>Coordenada Y del dentro. </td></tr>
+    <tr><td class="paramname">radius</td><td>Radio del círculo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a63dbd4ad7b1c9de0e5d96851bb4fc4e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fillRect </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dibuja un rectangulo relleno definido por sus dos esquinas.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x1</td><td>Coordenada X de la primera esquina. </td></tr>
+    <tr><td class="paramname">y1</td><td>Coordenada Y de la primera esquina. </td></tr>
+    <tr><td class="paramname">x2</td><td>Coordenada X de la segunda esquina. </td></tr>
+    <tr><td class="paramname">y2</td><td>Coordenada Y de la segunda esquina. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a067d1eb3a441d46aea4777a3cdbff9bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fillRoundRect </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dibuja un rectangulo relleno con los bordes redondeados definido por sus dos esquinas.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x1</td><td>Coordenada X de la primera esquina. </td></tr>
+    <tr><td class="paramname">y1</td><td>Coordenada Y de la primera esquina. </td></tr>
+    <tr><td class="paramname">x2</td><td>Coordenada X de la segunda esquina. </td></tr>
+    <tr><td class="paramname">y2</td><td>Coordenada Y de la segunda esquina. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6909defb82a4e0e31cdbb5436482b043"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fillScr </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Rellena la pantalla con un color definido mediante un valor de 16 bits con el formato RGB565</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>Color en formato RGB565 (5 bits rojo, 6 bits verde, 5 bits azul). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a567fa7d4acc4bcf15ee7e42bfbdcf2f7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fillScrRGB </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Rellena la pantalla con un color definido mediante sus componentes RGB.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Porcentaje de color rojo (0-255). </td></tr>
+    <tr><td class="paramname">g</td><td>Porcentaje de color verde (0-255). </td></tr>
+    <tr><td class="paramname">b</td><td>Porcentaje de color azul (0-255). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a847b53f1c381c935f9f9706bc148b6a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t* getFont </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Obtiene la dirección del vector de la fuente usada.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>Dirección de la fuente usada. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3b7a1bb96d4a66d12736bb4aae96d4e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t getFontXsize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retorna el ancho (en pixels) de la fuente en uso.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>Ancho en pixels de la fuente en uso. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad9e70ceef4b20c00bf1921d9a52fdb78"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t getFontYsize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retorna el alto (en pixels) de la fuente en uso.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>Alto en pixels de la fuente en uso. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9d5855c201de1db613dbcb2bc9d6cdca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void inicializarTFT </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>orientacion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inicializa el display TFT. Seleccciona negro para el fondo y blanco para escribir.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orientacion</td><td>Orientación del display: LANDSCAPE o PORTRAIT </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab2eb6c64aa531ae6576d1ac6a9a0a896"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>st</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>deg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Imprime una cadena de caracteres a partir de las coordenadas (x,y) con un ángulo determinado. Las coordenadas definen la esquina superior izquierda del primer carácter de la cadena.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">st</td><td>Cadena de caracteres. </td></tr>
+    <tr><td class="paramname">x</td><td>Coordenada X de la esquena superior izquierda del primer carácter. </td></tr>
+    <tr><td class="paramname">y</td><td>Coordenada Y de la esquena superior izquierda del primer carácter. </td></tr>
+    <tr><td class="paramname">deg</td><td>Ángulo con el que se imprime la cadena (0 horizontal, 90 vertical, etc.) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a85e6fe8f83c873a1e235ae2f1cfbf460"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setBackColor </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Selecciona el color de fondo usado para imprmir los caracteres. El argumento es el color en el formato RGB565. Se pueden usar constantes predefinidas con los colores usados por las tarjetas VGA: VGA_WHITE, VGA_RED, etc. (ver <a class="el" href="TftDriver_8h.html" title="Módulo encargado de gestionar el TFT1.8 del shield TFT1.8SP de elecfreaks (ref. EF02005). El shield está basado en un display con el controlador ST7735S. ">TftDriver.h</a>). Además se puede seleccionar el color VGA_TRANSPARENT para que el fondo de los caracteres sea transparente.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>Color en formato RGB565 (5 bits rojo, 6 bits verde, 5 bits azul). Usar 0xFFFFFFFF (VGA_TRANSPARENT) para que el fondo de los caracteres sea transparente. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad1d7e5f7822e300f3d98cc2c405f1a0e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setBackColorRGB </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Selecciona el color de fondo del display.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Porcentaje de color rojo (0-255). Se usan los 5 bits más significativos. </td></tr>
+    <tr><td class="paramname">g</td><td>Porcentaje de color verde (0-255). Se usan los 6 bits más significativos. </td></tr>
+    <tr><td class="paramname">b</td><td>Porcentaje de color azul (0-255). Se usan los 5 bits más significativos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa2d6d012f8ddf8f3493499d0689dd6ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setColor </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Selecciona el color para escribir. Todas las funciones que dibujan en el display (draw, fill y print) usan este color. El color se define mediante un uint16_t con el formato RGB565. Se pueden usar constantes predefinidas con los colores usados por las tarjetas VGA: VGA_WHITE, VGA_RED, etc. (ver <a class="el" href="TftDriver_8h.html" title="Módulo encargado de gestionar el TFT1.8 del shield TFT1.8SP de elecfreaks (ref. EF02005). El shield está basado en un display con el controlador ST7735S. ">TftDriver.h</a>).</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>Color en formato RGB565 (5 bits rojo, 6 bits verde, 5 bits azul). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac77d265acfbff075ba100a03adab0d20"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setColorRGB </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Selecciona el color para escribir. Todas las funciones que dibujan en el display (drawXX, fillXX y print) usan este color.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Porcentaje de color rojo (0-255). Se usan los 5 bits más significativos. </td></tr>
+    <tr><td class="paramname">g</td><td>Porcentaje de color verde (0-255). Se usan los 6 bits más significativos. </td></tr>
+    <tr><td class="paramname">b</td><td>Porcentaje de color azul (0-255). Se usan los 5 bits más significativos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aec249f4de798ec005c29ce88b20e4ef7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFont </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>font</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Selecciona la fuente a usar por las funciones de texto. Por ejemplo, para seleccionar la fuente SmallFont definida en DefaultFonts.c basta con hacer:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;extern uint8_t SmallFont[];</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;...</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;SetFont(SmallFont[];</div></div><!-- fragment --><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">font</td><td>Nombre del vector que contiene la definición de la fuente. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Jueves, 24 de Noviembre de 2016 13:04:45 para Driver para TFT1.8SP. por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

@@ -1,0 +1,5 @@
+Programa de Demo para el shield TFT1.8SP de Elecfreaks
+
+Este programa muestra los recursos disponibles en el driver para el display del shield TFT1.8SP.
+
+

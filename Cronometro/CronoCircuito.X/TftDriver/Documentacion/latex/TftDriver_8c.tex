@@ -1,0 +1,483 @@
+\hypertarget{TftDriver_8c}{}\subsection{Referencia del Archivo Tft\+Driver.\+c}
+\label{TftDriver_8c}\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+
+
+Módulo encargado de gestionar el shield T\+F\+T1.\+8\+SP de elecfreaks (ref. E\+F02005). El shield está basado en un display con el controlador S\+T7735S. Este driver está basado en el U\+T\+FT driver, aunque se ha portado a C y se han eliminado el soporte para el resto de T\+F\+Ts que incluía el driver original.  
+
+
+{\ttfamily \#include $<$xc.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Tft\+Driver.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\\*
+\subsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{TftDriver_8c_a9d5855c201de1db613dbcb2bc9d6cdca}{inicializar\+T\+FT} (int orientacion)
+\item 
+void \hyperlink{TftDriver_8c_a556ec8adee522ef852adc5ecba492996}{clr\+Scr} (void)
+\item 
+void \hyperlink{TftDriver_8c_ac77d265acfbff075ba100a03adab0d20}{set\+Color\+R\+GB} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\item 
+void \hyperlink{TftDriver_8c_aa2d6d012f8ddf8f3493499d0689dd6ba}{set\+Color} (uint16\+\_\+t color)
+\item 
+void \hyperlink{TftDriver_8c_ad1d7e5f7822e300f3d98cc2c405f1a0e}{set\+Back\+Color\+R\+GB} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\item 
+void \hyperlink{TftDriver_8c_a85e6fe8f83c873a1e235ae2f1cfbf460}{set\+Back\+Color} (uint32\+\_\+t color)
+\item 
+void \hyperlink{TftDriver_8c_a69f5e0e04dc084dcfd8f11da497290d8}{draw\+Rect} (int x1, int y1, int x2, int y2)
+\item 
+void \hyperlink{TftDriver_8c_ac9699711101163b29a02dc191efff6a9}{draw\+Round\+Rect} (int x1, int y1, int x2, int y2)
+\item 
+void \hyperlink{TftDriver_8c_a63dbd4ad7b1c9de0e5d96851bb4fc4e3}{fill\+Rect} (int x1, int y1, int x2, int y2)
+\item 
+void \hyperlink{TftDriver_8c_a067d1eb3a441d46aea4777a3cdbff9bc}{fill\+Round\+Rect} (int x1, int y1, int x2, int y2)
+\item 
+void \hyperlink{TftDriver_8c_ae78bea676676698842bfcf44afa01fe7}{draw\+Circle} (int x, int y, int radius)
+\item 
+void \hyperlink{TftDriver_8c_a0684d2369cd27f4feffc1dffae0b8df5}{fill\+Circle} (int x, int y, int radius)
+\item 
+void \hyperlink{TftDriver_8c_a567fa7d4acc4bcf15ee7e42bfbdcf2f7}{fill\+Scr\+R\+GB} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\item 
+void \hyperlink{TftDriver_8c_a6909defb82a4e0e31cdbb5436482b043}{fill\+Scr} (uint16\+\_\+t color)
+\item 
+void \hyperlink{TftDriver_8c_a670eabe51fc97973e3ae3b909b9a57dc}{draw\+Line} (int x1, int y1, int x2, int y2)
+\item 
+void \hyperlink{TftDriver_8c_aa2dab771cbe8d68506897f90536f8d3f}{draw\+Pixel} (int x, int y)
+\item 
+void \hyperlink{TftDriver_8c_aec249f4de798ec005c29ce88b20e4ef7}{set\+Font} (uint8\+\_\+t $\ast$font)
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{TftDriver_8c_a847b53f1c381c935f9f9706bc148b6a1}{get\+Font} (void)
+\item 
+uint8\+\_\+t \hyperlink{TftDriver_8c_a3b7a1bb96d4a66d12736bb4aae96d4e6}{get\+Font\+Xsize} (void)
+\item 
+uint8\+\_\+t \hyperlink{TftDriver_8c_ad9e70ceef4b20c00bf1921d9a52fdb78}{get\+Font\+Ysize} (void)
+\item 
+void \hyperlink{TftDriver_8c_ab2eb6c64aa531ae6576d1ac6a9a0a896}{print} (char $\ast$st, int x, int y, int deg)
+\item 
+void \hyperlink{TftDriver_8c_a52d2286720fcaddd3490959bcf25bb1a}{draw\+Bitmap} (int x, int y, int sx, int sy, uint16\+\_\+t data\mbox{[}$\,$\mbox{]}, int scale)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Descripción detallada}
+Módulo encargado de gestionar el shield T\+F\+T1.\+8\+SP de elecfreaks (ref. E\+F02005). El shield está basado en un display con el controlador S\+T7735S. Este driver está basado en el U\+T\+FT driver, aunque se ha portado a C y se han eliminado el soporte para el resto de T\+F\+Ts que incluía el driver original. 
+
+\begin{DoxyAuthor}{Autor}
+José Daniel Muñoz Frías
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\+0.\+0. Versión inicial
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+16/11/2016 
+\end{DoxyDate}
+
+
+\subsubsection{Documentación de las funciones}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!clr\+Scr@{clr\+Scr}}
+\index{clr\+Scr@{clr\+Scr}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{clr\+Scr(void)}{clrScr(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void clr\+Scr (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_a556ec8adee522ef852adc5ecba492996}{}\label{TftDriver_8c_a556ec8adee522ef852adc5ecba492996}
+Borra la pantalla poniendola toda a color negro. \index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!draw\+Bitmap@{draw\+Bitmap}}
+\index{draw\+Bitmap@{draw\+Bitmap}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{draw\+Bitmap(int x, int y, int sx, int sy, uint16\+\_\+t data[], int scale)}{drawBitmap(int x, int y, int sx, int sy, uint16_t data[], int scale)}}]{\setlength{\rightskip}{0pt plus 5cm}void draw\+Bitmap (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{sx, }
+\item[{int}]{sy, }
+\item[{uint16\+\_\+t}]{data\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{scale}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_a52d2286720fcaddd3490959bcf25bb1a}{}\label{TftDriver_8c_a52d2286720fcaddd3490959bcf25bb1a}
+Dibuja una imagen (bitmap) en la pantalla. El bitmap ha de estar definido como un vector con los colores de todos los píxeles en formato R\+G\+B565. La forma más fácil de generarlo es mediante una aplicación web disponible en la página del autor del driver original\+: \href{http://www.rinkydinkelectronics.com/t_imageconverter565.php}{\tt http\+://www.\+rinkydinkelectronics.\+com/t\+\_\+imageconverter565.\+php}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em x} & Coordenada X de la esquina superior derecha del bitmap. \\
+\hline
+{\em y} & Coordenada Y de la esquina superior derecha del bitmap. \\
+\hline
+{\em sx} & Tamaño horizontal del bitmap en pixels. \\
+\hline
+{\em sy} & Tamaño vertical del bitmap en pixels. \\
+\hline
+{\em data} & Dirección del vector que contiene el bitmap. \\
+\hline
+{\em scale} & Factor de escala para dibujar el bitmap. \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!draw\+Circle@{draw\+Circle}}
+\index{draw\+Circle@{draw\+Circle}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{draw\+Circle(int x, int y, int radius)}{drawCircle(int x, int y, int radius)}}]{\setlength{\rightskip}{0pt plus 5cm}void draw\+Circle (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{radius}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_ae78bea676676698842bfcf44afa01fe7}{}\label{TftDriver_8c_ae78bea676676698842bfcf44afa01fe7}
+Dibuja un círculo definido por su centro y su radio.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em x} & Coordenada X del centro. \\
+\hline
+{\em y} & Coordenada Y del dentro. \\
+\hline
+{\em radius} & Radio del círculo. \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!draw\+Line@{draw\+Line}}
+\index{draw\+Line@{draw\+Line}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{draw\+Line(int x1, int y1, int x2, int y2)}{drawLine(int x1, int y1, int x2, int y2)}}]{\setlength{\rightskip}{0pt plus 5cm}void draw\+Line (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_a670eabe51fc97973e3ae3b909b9a57dc}{}\label{TftDriver_8c_a670eabe51fc97973e3ae3b909b9a57dc}
+Dibuja una línea entre los puntos (x1,y1) y (x2,y2)
+
+
+\begin{DoxyParams}{Parámetros}
+{\em x1} & Coordenada X del punto 1. \\
+\hline
+{\em y1} & Coordenada Y del punto 1. \\
+\hline
+{\em x2} & Coordenada X del punto 2. \\
+\hline
+{\em y2} & Coordenada Y del punto 2. \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!draw\+Pixel@{draw\+Pixel}}
+\index{draw\+Pixel@{draw\+Pixel}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{draw\+Pixel(int x, int y)}{drawPixel(int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}void draw\+Pixel (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_aa2dab771cbe8d68506897f90536f8d3f}{}\label{TftDriver_8c_aa2dab771cbe8d68506897f90536f8d3f}
+Dibuja un pixel en las coordenadas (x,y).
+
+
+\begin{DoxyParams}{Parámetros}
+{\em x} & Coordenada X del pixel. \\
+\hline
+{\em y} & Coordenada Y del pixel. \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!draw\+Rect@{draw\+Rect}}
+\index{draw\+Rect@{draw\+Rect}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{draw\+Rect(int x1, int y1, int x2, int y2)}{drawRect(int x1, int y1, int x2, int y2)}}]{\setlength{\rightskip}{0pt plus 5cm}void draw\+Rect (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_a69f5e0e04dc084dcfd8f11da497290d8}{}\label{TftDriver_8c_a69f5e0e04dc084dcfd8f11da497290d8}
+Dibuja un rectangulo definido por sus dos esquinas.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em x1} & Coordenada X de la primera esquina. \\
+\hline
+{\em y1} & Coordenada Y de la primera esquina. \\
+\hline
+{\em x2} & Coordenada X de la segunda esquina. \\
+\hline
+{\em y2} & Coordenada Y de la segunda esquina. \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!draw\+Round\+Rect@{draw\+Round\+Rect}}
+\index{draw\+Round\+Rect@{draw\+Round\+Rect}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{draw\+Round\+Rect(int x1, int y1, int x2, int y2)}{drawRoundRect(int x1, int y1, int x2, int y2)}}]{\setlength{\rightskip}{0pt plus 5cm}void draw\+Round\+Rect (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_ac9699711101163b29a02dc191efff6a9}{}\label{TftDriver_8c_ac9699711101163b29a02dc191efff6a9}
+Dibuja un rectangulo con los bordes redondeados definido por sus dos esquinas.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em x1} & Coordenada X de la primera esquina. \\
+\hline
+{\em y1} & Coordenada Y de la primera esquina. \\
+\hline
+{\em x2} & Coordenada X de la segunda esquina. \\
+\hline
+{\em y2} & Coordenada Y de la segunda esquina. \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!fill\+Circle@{fill\+Circle}}
+\index{fill\+Circle@{fill\+Circle}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{fill\+Circle(int x, int y, int radius)}{fillCircle(int x, int y, int radius)}}]{\setlength{\rightskip}{0pt plus 5cm}void fill\+Circle (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{radius}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_a0684d2369cd27f4feffc1dffae0b8df5}{}\label{TftDriver_8c_a0684d2369cd27f4feffc1dffae0b8df5}
+Dibuja un círculo relleno definido por su centro y su radio.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em x} & Coordenada X del centro. \\
+\hline
+{\em y} & Coordenada Y del dentro. \\
+\hline
+{\em radius} & Radio del círculo. \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!fill\+Rect@{fill\+Rect}}
+\index{fill\+Rect@{fill\+Rect}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{fill\+Rect(int x1, int y1, int x2, int y2)}{fillRect(int x1, int y1, int x2, int y2)}}]{\setlength{\rightskip}{0pt plus 5cm}void fill\+Rect (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_a63dbd4ad7b1c9de0e5d96851bb4fc4e3}{}\label{TftDriver_8c_a63dbd4ad7b1c9de0e5d96851bb4fc4e3}
+Dibuja un rectangulo relleno definido por sus dos esquinas.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em x1} & Coordenada X de la primera esquina. \\
+\hline
+{\em y1} & Coordenada Y de la primera esquina. \\
+\hline
+{\em x2} & Coordenada X de la segunda esquina. \\
+\hline
+{\em y2} & Coordenada Y de la segunda esquina. \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!fill\+Round\+Rect@{fill\+Round\+Rect}}
+\index{fill\+Round\+Rect@{fill\+Round\+Rect}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{fill\+Round\+Rect(int x1, int y1, int x2, int y2)}{fillRoundRect(int x1, int y1, int x2, int y2)}}]{\setlength{\rightskip}{0pt plus 5cm}void fill\+Round\+Rect (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_a067d1eb3a441d46aea4777a3cdbff9bc}{}\label{TftDriver_8c_a067d1eb3a441d46aea4777a3cdbff9bc}
+Dibuja un rectangulo relleno con los bordes redondeados definido por sus dos esquinas.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em x1} & Coordenada X de la primera esquina. \\
+\hline
+{\em y1} & Coordenada Y de la primera esquina. \\
+\hline
+{\em x2} & Coordenada X de la segunda esquina. \\
+\hline
+{\em y2} & Coordenada Y de la segunda esquina. \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!fill\+Scr@{fill\+Scr}}
+\index{fill\+Scr@{fill\+Scr}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{fill\+Scr(uint16\+\_\+t color)}{fillScr(uint16_t color)}}]{\setlength{\rightskip}{0pt plus 5cm}void fill\+Scr (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_a6909defb82a4e0e31cdbb5436482b043}{}\label{TftDriver_8c_a6909defb82a4e0e31cdbb5436482b043}
+Rellena la pantalla con un color definido mediante un valor de 16 bits con el formato R\+G\+B565
+
+
+\begin{DoxyParams}{Parámetros}
+{\em color} & Color en formato R\+G\+B565 (5 bits rojo, 6 bits verde, 5 bits azul). \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!fill\+Scr\+R\+GB@{fill\+Scr\+R\+GB}}
+\index{fill\+Scr\+R\+GB@{fill\+Scr\+R\+GB}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{fill\+Scr\+R\+G\+B(uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)}{fillScrRGB(uint8_t r, uint8_t g, uint8_t b)}}]{\setlength{\rightskip}{0pt plus 5cm}void fill\+Scr\+R\+GB (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{r, }
+\item[{uint8\+\_\+t}]{g, }
+\item[{uint8\+\_\+t}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_a567fa7d4acc4bcf15ee7e42bfbdcf2f7}{}\label{TftDriver_8c_a567fa7d4acc4bcf15ee7e42bfbdcf2f7}
+Rellena la pantalla con un color definido mediante sus componentes R\+GB.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em r} & Porcentaje de color rojo (0-\/255). \\
+\hline
+{\em g} & Porcentaje de color verde (0-\/255). \\
+\hline
+{\em b} & Porcentaje de color azul (0-\/255). \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!get\+Font@{get\+Font}}
+\index{get\+Font@{get\+Font}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{get\+Font(void)}{getFont(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ get\+Font (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_a847b53f1c381c935f9f9706bc148b6a1}{}\label{TftDriver_8c_a847b53f1c381c935f9f9706bc148b6a1}
+Obtiene la dirección del vector de la fuente usada.
+
+\begin{DoxyReturn}{Devuelve}
+Dirección de la fuente usada. 
+\end{DoxyReturn}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!get\+Font\+Xsize@{get\+Font\+Xsize}}
+\index{get\+Font\+Xsize@{get\+Font\+Xsize}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{get\+Font\+Xsize(void)}{getFontXsize(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t get\+Font\+Xsize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_a3b7a1bb96d4a66d12736bb4aae96d4e6}{}\label{TftDriver_8c_a3b7a1bb96d4a66d12736bb4aae96d4e6}
+Retorna el ancho (en pixels) de la fuente en uso.
+
+\begin{DoxyReturn}{Devuelve}
+Ancho en pixels de la fuente en uso. 
+\end{DoxyReturn}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!get\+Font\+Ysize@{get\+Font\+Ysize}}
+\index{get\+Font\+Ysize@{get\+Font\+Ysize}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{get\+Font\+Ysize(void)}{getFontYsize(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t get\+Font\+Ysize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_ad9e70ceef4b20c00bf1921d9a52fdb78}{}\label{TftDriver_8c_ad9e70ceef4b20c00bf1921d9a52fdb78}
+Retorna el alto (en pixels) de la fuente en uso.
+
+\begin{DoxyReturn}{Devuelve}
+Alto en pixels de la fuente en uso. 
+\end{DoxyReturn}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!inicializar\+T\+FT@{inicializar\+T\+FT}}
+\index{inicializar\+T\+FT@{inicializar\+T\+FT}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{inicializar\+T\+F\+T(int orientacion)}{inicializarTFT(int orientacion)}}]{\setlength{\rightskip}{0pt plus 5cm}void inicializar\+T\+FT (
+\begin{DoxyParamCaption}
+\item[{int}]{orientacion}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_a9d5855c201de1db613dbcb2bc9d6cdca}{}\label{TftDriver_8c_a9d5855c201de1db613dbcb2bc9d6cdca}
+Inicializa el display T\+FT. Seleccciona negro para el fondo y blanco para escribir.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em orientacion} & Orientación del display\+: L\+A\+N\+D\+S\+C\+A\+PE o P\+O\+R\+T\+R\+A\+IT \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!print@{print}}
+\index{print@{print}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{print(char $\ast$st, int x, int y, int deg)}{print(char *st, int x, int y, int deg)}}]{\setlength{\rightskip}{0pt plus 5cm}void print (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{st, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{deg}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_ab2eb6c64aa531ae6576d1ac6a9a0a896}{}\label{TftDriver_8c_ab2eb6c64aa531ae6576d1ac6a9a0a896}
+Imprime una cadena de caracteres a partir de las coordenadas (x,y) con un ángulo determinado. Las coordenadas definen la esquina superior izquierda del primer carácter de la cadena.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em st} & Cadena de caracteres. \\
+\hline
+{\em x} & Coordenada X de la esquena superior izquierda del primer carácter. \\
+\hline
+{\em y} & Coordenada Y de la esquena superior izquierda del primer carácter. \\
+\hline
+{\em deg} & Ángulo con el que se imprime la cadena (0 horizontal, 90 vertical, etc.) \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!set\+Back\+Color@{set\+Back\+Color}}
+\index{set\+Back\+Color@{set\+Back\+Color}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{set\+Back\+Color(uint32\+\_\+t color)}{setBackColor(uint32_t color)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Back\+Color (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_a85e6fe8f83c873a1e235ae2f1cfbf460}{}\label{TftDriver_8c_a85e6fe8f83c873a1e235ae2f1cfbf460}
+Selecciona el color de fondo usado para imprmir los caracteres. El argumento es el color en el formato R\+G\+B565. Se pueden usar constantes predefinidas con los colores usados por las tarjetas V\+GA\+: V\+G\+A\+\_\+\+W\+H\+I\+TE, V\+G\+A\+\_\+\+R\+ED, etc. (ver \hyperlink{TftDriver_8h}{Tft\+Driver.\+h}). Además se puede seleccionar el color V\+G\+A\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT para que el fondo de los caracteres sea transparente.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em color} & Color en formato R\+G\+B565 (5 bits rojo, 6 bits verde, 5 bits azul). Usar 0x\+F\+F\+F\+F\+F\+F\+FF (V\+G\+A\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT) para que el fondo de los caracteres sea transparente. \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!set\+Back\+Color\+R\+GB@{set\+Back\+Color\+R\+GB}}
+\index{set\+Back\+Color\+R\+GB@{set\+Back\+Color\+R\+GB}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{set\+Back\+Color\+R\+G\+B(uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)}{setBackColorRGB(uint8_t r, uint8_t g, uint8_t b)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Back\+Color\+R\+GB (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{r, }
+\item[{uint8\+\_\+t}]{g, }
+\item[{uint8\+\_\+t}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_ad1d7e5f7822e300f3d98cc2c405f1a0e}{}\label{TftDriver_8c_ad1d7e5f7822e300f3d98cc2c405f1a0e}
+Selecciona el color de fondo del display.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em r} & Porcentaje de color rojo (0-\/255). Se usan los 5 bits más significativos. \\
+\hline
+{\em g} & Porcentaje de color verde (0-\/255). Se usan los 6 bits más significativos. \\
+\hline
+{\em b} & Porcentaje de color azul (0-\/255). Se usan los 5 bits más significativos. \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{set\+Color(uint16\+\_\+t color)}{setColor(uint16_t color)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Color (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_aa2d6d012f8ddf8f3493499d0689dd6ba}{}\label{TftDriver_8c_aa2d6d012f8ddf8f3493499d0689dd6ba}
+Selecciona el color para escribir. Todas las funciones que dibujan en el display (draw, fill y print) usan este color. El color se define mediante un uint16\+\_\+t con el formato R\+G\+B565. Se pueden usar constantes predefinidas con los colores usados por las tarjetas V\+GA\+: V\+G\+A\+\_\+\+W\+H\+I\+TE, V\+G\+A\+\_\+\+R\+ED, etc. (ver \hyperlink{TftDriver_8h}{Tft\+Driver.\+h}).
+
+
+\begin{DoxyParams}{Parámetros}
+{\em color} & Color en formato R\+G\+B565 (5 bits rojo, 6 bits verde, 5 bits azul). \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!set\+Color\+R\+GB@{set\+Color\+R\+GB}}
+\index{set\+Color\+R\+GB@{set\+Color\+R\+GB}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{set\+Color\+R\+G\+B(uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)}{setColorRGB(uint8_t r, uint8_t g, uint8_t b)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Color\+R\+GB (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{r, }
+\item[{uint8\+\_\+t}]{g, }
+\item[{uint8\+\_\+t}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_ac77d265acfbff075ba100a03adab0d20}{}\label{TftDriver_8c_ac77d265acfbff075ba100a03adab0d20}
+Selecciona el color para escribir. Todas las funciones que dibujan en el display (draw\+XX, fill\+XX y print) usan este color.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em r} & Porcentaje de color rojo (0-\/255). Se usan los 5 bits más significativos. \\
+\hline
+{\em g} & Porcentaje de color verde (0-\/255). Se usan los 6 bits más significativos. \\
+\hline
+{\em b} & Porcentaje de color azul (0-\/255). Se usan los 5 bits más significativos. \\
+\hline
+\end{DoxyParams}
+\index{Tft\+Driver.\+c@{Tft\+Driver.\+c}!set\+Font@{set\+Font}}
+\index{set\+Font@{set\+Font}!Tft\+Driver.\+c@{Tft\+Driver.\+c}}
+\paragraph[{\texorpdfstring{set\+Font(uint8\+\_\+t $\ast$font)}{setFont(uint8_t *font)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Font (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{font}
+\end{DoxyParamCaption}
+)}\hypertarget{TftDriver_8c_aec249f4de798ec005c29ce88b20e4ef7}{}\label{TftDriver_8c_aec249f4de798ec005c29ce88b20e4ef7}
+Selecciona la fuente a usar por las funciones de texto. Por ejemplo, para seleccionar la fuente Small\+Font definida en Default\+Fonts.\+c basta con hacer\+:
+
+
+\begin{DoxyCode}
+1 extern uint8\_t SmallFont[];
+2 ...
+3 SetFont(SmallFont[];
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parámetros}
+{\em font} & Nombre del vector que contiene la definición de la fuente. \\
+\hline
+\end{DoxyParams}

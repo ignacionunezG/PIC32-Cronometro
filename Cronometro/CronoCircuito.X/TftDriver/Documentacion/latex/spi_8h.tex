@@ -1,0 +1,59 @@
+\hypertarget{spi_8h}{}\subsection{Referencia del Archivo spi.\+h}
+\label{spi_8h}\index{spi.\+h@{spi.\+h}}
+
+
+Módulo encargado de gestionar las comunicaciones con otros dispositivos a través del bus S\+PI.  
+
+
+\subsubsection*{\textquotesingle{}defines\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+P\+I\+\_\+\+I\+N\+T\+\_\+\+P\+R\+I\+OR}~6\hypertarget{spi_8h_a191e883699f93643b2a4b7c2a33343bb}{}\label{spi_8h_a191e883699f93643b2a4b7c2a33343bb}
+
+\item 
+\#define {\bfseries S\+P\+I\+\_\+\+E\+R\+R\+\_\+\+I\+N\+T\+\_\+\+P\+R\+I\+OR}~5\hypertarget{spi_8h_ae0da4d7bb660e027f9f2c835e1579f2f}{}\label{spi_8h_ae0da4d7bb660e027f9f2c835e1579f2f}
+
+\end{DoxyCompactItemize}
+\subsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries S\+P\+I\+\_\+\+Master\+Init} (int pin\+\_\+sck, int pin\+\_\+sdi, int pin\+\_\+sdo, int pin\+\_\+ss)\hypertarget{spi_8h_aaa424c5c40517b6b597e281388238f84}{}\label{spi_8h_aaa424c5c40517b6b597e281388238f84}
+
+\item 
+void \hyperlink{spi_8h_a0a2718ddc6a624329550848fbf81b08f}{S\+P\+I\+\_\+\+Send\+Frame} (uint8\+\_\+t dato)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Descripción detallada}
+Módulo encargado de gestionar las comunicaciones con otros dispositivos a través del bus S\+PI. 
+
+\begin{DoxyAuthor}{Autor}
+José Daniel Muñoz Frías (daniel) 
+
+Carlos Rodriguez-\/\+Morcillo (carlosrg)
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\+0.\+0. Módulo original (probado) (carlosrg) 
+
+1.\+0.\+1. Modificada la función de inicialización para mapear el periférico a cualquier pin del micro. (daniel)
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+16/11/2016 
+\end{DoxyDate}
+
+
+\subsubsection{Documentación de las funciones}
+\index{spi.\+h@{spi.\+h}!S\+P\+I\+\_\+\+Send\+Frame@{S\+P\+I\+\_\+\+Send\+Frame}}
+\index{S\+P\+I\+\_\+\+Send\+Frame@{S\+P\+I\+\_\+\+Send\+Frame}!spi.\+h@{spi.\+h}}
+\paragraph[{\texorpdfstring{S\+P\+I\+\_\+\+Send\+Frame(uint8\+\_\+t dato)}{SPI_SendFrame(uint8_t dato)}}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+\_\+\+Send\+Frame (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{dato}
+\end{DoxyParamCaption}
+)}\hypertarget{spi_8h_a0a2718ddc6a624329550848fbf81b08f}{}\label{spi_8h_a0a2718ddc6a624329550848fbf81b08f}
+Envía una trama de 1 byte por el puerto S\+PI. Controla el pin\+\_\+ss para seleccionar el dispositivo mientras dura la transmisión.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em dato} & Dato enviado por S\+PI \\
+\hline
+\end{DoxyParams}

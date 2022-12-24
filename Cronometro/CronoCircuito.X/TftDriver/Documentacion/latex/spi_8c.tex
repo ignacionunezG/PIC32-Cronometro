@@ -1,0 +1,72 @@
+\hypertarget{spi_8c}{}\subsection{Referencia del Archivo spi.\+c}
+\label{spi_8c}\index{spi.\+c@{spi.\+c}}
+
+
+Módulo encargado de gestionar las comunicaciones con otros dispositivos a través del bus S\+PI.  
+
+
+{\ttfamily \#include $<$xc.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\\*
+\subsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{spi_8c_adee7d1c1d7c0c377495252f63a2d3ce6}{inicializar\+R\+Pn} (int pin\+\_\+rp, int num\+\_\+periferico)
+\item 
+void {\bfseries \+\_\+\+\_\+attribute\+\_\+\+\_\+} ((interrupt, no\+\_\+auto\+\_\+psv))\hypertarget{spi_8c_a226557d5e42f7e29ddaff30606138459}{}\label{spi_8c_a226557d5e42f7e29ddaff30606138459}
+
+\item 
+void \hyperlink{spi_8c_a0a2718ddc6a624329550848fbf81b08f}{S\+P\+I\+\_\+\+Send\+Frame} (uint8\+\_\+t dato)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Descripción detallada}
+Módulo encargado de gestionar las comunicaciones con otros dispositivos a través del bus S\+PI. 
+
+\begin{DoxyAuthor}{Autor}
+José Daniel Muñoz Frías (daniel) 
+
+Carlos Rodriguez-\/\+Morcillo (carlosrg)
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+1.\+0.\+0. Módulo original (probado) (carlosrg) 
+
+1.\+0.\+1. Modificada la función de inicialización para mapear el periférico a cualquier pin del micro. (daniel)
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+16/11/2016 
+\end{DoxyDate}
+
+
+\subsubsection{Documentación de las funciones}
+\index{spi.\+c@{spi.\+c}!inicializar\+R\+Pn@{inicializar\+R\+Pn}}
+\index{inicializar\+R\+Pn@{inicializar\+R\+Pn}!spi.\+c@{spi.\+c}}
+\paragraph[{\texorpdfstring{inicializar\+R\+Pn(int pin\+\_\+rp, int num\+\_\+periferico)}{inicializarRPn(int pin_rp, int num_periferico)}}]{\setlength{\rightskip}{0pt plus 5cm}void inicializar\+R\+Pn (
+\begin{DoxyParamCaption}
+\item[{int}]{pin\+\_\+rp, }
+\item[{int}]{num\+\_\+periferico}
+\end{DoxyParamCaption}
+)}\hypertarget{spi_8c_adee7d1c1d7c0c377495252f63a2d3ce6}{}\label{spi_8c_adee7d1c1d7c0c377495252f63a2d3ce6}
+Inicializa el registro R\+P\+OR correspondiente al pin indicado por el argumento con el número de periférico indicado en el otro argumento.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em pin\+\_\+rp} & Número del pin R\+Pn que se desea configurar. \\
+\hline
+{\em num\+\_\+periferico} & Número del perifiérico cuya salida se quiere asociar al pin indicado en pin\+\_\+rp. \\
+\hline
+\end{DoxyParams}
+\index{spi.\+c@{spi.\+c}!S\+P\+I\+\_\+\+Send\+Frame@{S\+P\+I\+\_\+\+Send\+Frame}}
+\index{S\+P\+I\+\_\+\+Send\+Frame@{S\+P\+I\+\_\+\+Send\+Frame}!spi.\+c@{spi.\+c}}
+\paragraph[{\texorpdfstring{S\+P\+I\+\_\+\+Send\+Frame(uint8\+\_\+t dato)}{SPI_SendFrame(uint8_t dato)}}]{\setlength{\rightskip}{0pt plus 5cm}void S\+P\+I\+\_\+\+Send\+Frame (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{dato}
+\end{DoxyParamCaption}
+)}\hypertarget{spi_8c_a0a2718ddc6a624329550848fbf81b08f}{}\label{spi_8c_a0a2718ddc6a624329550848fbf81b08f}
+Envía una trama de 1 byte por el puerto S\+PI. Controla el pin\+\_\+ss para seleccionar el dispositivo mientras dura la transmisión.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em dato} & Dato enviado por S\+PI \\
+\hline
+\end{DoxyParams}
