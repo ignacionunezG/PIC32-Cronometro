@@ -7,4 +7,4 @@
 #### 2.Bocina, que suena cuando se realiza el mejor tiempo por vuelta
 #### 3.Semáforos
 #### 4.UART, para transmitir y registrar los tiempos por vuelta
-#### 5.Display, para mostrar por pantalla el tiempo de la mejor vuelta y el de la última.
+#### 5.Display, para mostrar por pantalla el tiempo de la mejor vuelta y el de la última
